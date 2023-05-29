@@ -28,7 +28,7 @@ export default function FloatInput({
         value={value}
         onChange={onChange}
         onBlur={onBlur}
-        name={label}
+        id={label}
       />
       <label className="floatInput__label" for={label}>
         {label}
