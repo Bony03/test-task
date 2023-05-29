@@ -1,0 +1,20 @@
+@import "./variables.scss";
+
+.button {
+  width: 100px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 80px;
+  background-color: $btn-color-normal;
+  border: none;
+  padding: 0;
+  &:hover {
+    background-color: $btn-color-hover;
+  }
+  &:disabled {
+    color: $white87;
+    background-color: $btn-color-disabled;
+  }
+}

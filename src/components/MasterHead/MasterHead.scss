@@ -1,0 +1,35 @@
+.masterhead {
+  height: 500px;
+  max-width: 1170px;
+  margin: 0 auto 140px auto;
+  color: #ffffff;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../../public/static/pexels-oleksandr-pidvalnyi-1227513-big-copy.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__body {
+    width: 100%;
+    max-width: 412px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 16px;
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 21px;
+  }
+  &__content {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: 1023.98px) {
+  .masterhead {
+    height: 650px;
+  }
+}

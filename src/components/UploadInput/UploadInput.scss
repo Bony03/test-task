@@ -1,0 +1,55 @@
+@import "../../scss/variables.scss";
+.uploadInput {
+  margin-bottom: 50px;
+  &__body {
+    max-width: 380px;
+    height: 54px;
+    border-radius: 4px;
+    position: relative;
+    margin-bottom: 4px;
+    & span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 83px;
+      z-index: 1;
+      border-top-left-radius: inherit;
+      border-bottom-left-radius: inherit;
+      border: 1px solid rgba(0, 0, 0, 0.87);
+    }
+    & p {
+      position: absolute;
+      line-height: 52px;
+      color: $input-text-color;
+      top: 0;
+      left: 82px;
+      height: 100%;
+      padding: 0 16px;
+      width: calc(100% - 82px);
+      z-index: 0;
+      border-top-right-radius: inherit;
+      border-bottom-right-radius: inherit;
+      border: $input-border;
+      text-align: start;
+    }
+  }
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    opacity: 0;
+  }
+  &__text-error {
+    padding-left: 16px;
+    font-size: 12px;
+    line-height: 14px;
+    color: $input-error;
+  }
+}

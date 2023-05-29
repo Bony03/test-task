@@ -1,0 +1,48 @@
+@import "../../scss/variables.scss";
+.checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  &__input {
+    visibility: hidden;
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: $input-border;
+    margin: 0 12px 0 0;
+  }
+  & span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: $input-border;
+    transition: all 0.5s ease-out;
+    &::before {
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      border-radius: 50%;
+      background-color: $secondary;
+      transition: all 0.5s ease-out;
+    }
+  }
+  &.checked {
+    & span {
+      border: 1px solid $secondary;
+      &::before {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+  }
+}
