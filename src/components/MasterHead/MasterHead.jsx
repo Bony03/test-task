@@ -19,6 +19,7 @@ export default function MasterHead() {
           imageSRC === badSRC ? "masterhead__image" : "masterhead__image loaded"
         }
         src={imageSRC}
+        alt="Main image of field and skies"
       />
       <div className="masterhead__body">
         <h1 className="masterhead__title">
