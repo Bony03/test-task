@@ -1,7 +1,25 @@
+import { useEffect, useState } from "react";
 import "./MasterHead.scss";
 export default function MasterHead() {
+  const badSRC =
+    "./static/pexels-oleksandr-pidvalnyi-1227513-very-bad-copy.jpg";
+  const goodSRC = "./static/pexels-oleksandr-pidvalnyi-1227513-big-copy.jpg";
+  const [imageSRC, setImageSRC] = useState(badSRC);
+  useEffect(() => {
+    const img = new Image();
+    img.src = goodSRC;
+    img.onload = () => {
+      setImageSRC(goodSRC);
+    };
+  });
   return (
     <div className="masterhead">
+      <img
+        className={
+          imageSRC === badSRC ? "masterhead__image" : "masterhead__image loaded"
+        }
+        src={imageSRC}
+      />
       <div className="masterhead__body">
         <h1 className="masterhead__title">
           Test assignment for front-end developer
