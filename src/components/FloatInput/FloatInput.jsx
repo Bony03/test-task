@@ -30,7 +30,7 @@ export default function FloatInput({
         onBlur={onBlur}
         id={label}
       />
-      <label className="floatInput__label" for={label}>
+      <label className="floatInput__label" htmlFor={label}>
         {label}
       </label>
     </div>
