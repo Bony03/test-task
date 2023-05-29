@@ -5,7 +5,7 @@ export default function Header() {
       <div className="header__container">
         <div className="header__body">
           <div className="header__logo">
-            <a href="/">
+            <a href="/test-task-site/">
               <img src="./static/logo.svg" alt="Test Task Logo" />
             </a>
           </div>
